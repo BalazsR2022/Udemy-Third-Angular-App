@@ -5,7 +5,7 @@ table {
     table-layout: fixed;
     border-spacing: 1rem;
     text-align: right;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     border-radius: 0.25rem;
     border: 1px solid #76c0ae;
   }

@@ -1,4 +1,4 @@
-<p class="center" *ngIf="!results">Please enter some values and press "Calculate".</p>
+<p class="center" *ngIf="!results()">Please enter some values and press "Calculate".</p>
 
 <table *ngIf="results">
     <thead>
@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let result of results">
+        <tr *ngFor="let result of results()">
             <td>{{ result.year }}</td>
             <td>{{ result.valueEndOfYear | currency:"EUR"}}</td>
             <td>{{ result.interest | currency:"HUF"}}</td>
