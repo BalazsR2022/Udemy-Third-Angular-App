@@ -1,0 +1,23 @@
+<p class="center" *ngIf="!results">Please enter some values and press "Calculate".</p>
+
+<table *ngIf="results">
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Investment Value</th>
+            <th>Interest (Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of results">
+            <td>{{ result.year }}</td>
+            <td>{{ result.valueEndOfYear | currency:"EUR"}}</td>
+            <td>{{ result.interest | currency:"HUF"}}</td>
+            <td>{{ result.totalInterest | currency}}</td>
+            <td>{{ result.totalAmountInvested | currency}}</td>
+          </tr>
+    </tbody>
+</table>
+
