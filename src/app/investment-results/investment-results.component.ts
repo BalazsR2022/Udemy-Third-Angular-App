@@ -1,12 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule, CurrencyPipe } from '@angular/common';
 import { InvestmentService } from '../investment.service';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-investment-results',
-  standalone: true,
-  imports: [CommonModule, CurrencyPipe],
   templateUrl: './investment-results.component.html',
   styleUrls: ['./investment-results.component.css']
 })
