@@ -1,6 +1,8 @@
-<p class="center" *ngIf="!results()">Please enter some values and press "Calculate".</p>
+<!-- Ha nincs adat -->
+<p class="center" *ngIf="!(result | async)">Please enter some values and press "Calculate".</p>
 
-<table *ngIf="results">
+<!-- Ha van adat -->
+<table *ngIf="result | async as results">
     <thead>
         <tr>
             <th>Year</th>
@@ -11,13 +13,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let result of results()">
+        <!-- Iterálás az eredmények felett -->
+        <tr *ngFor="let result of results">
             <td>{{ result.year }}</td>
             <td>{{ result.valueEndOfYear | currency:"EUR"}}</td>
             <td>{{ result.interest | currency:"HUF"}}</td>
             <td>{{ result.totalInterest | currency}}</td>
             <td>{{ result.totalAmountInvested | currency}}</td>
-          </tr>
+        </tr>
     </tbody>
 </table>
-
